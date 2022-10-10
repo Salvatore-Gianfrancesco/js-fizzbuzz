@@ -17,12 +17,31 @@ for (let i = 1; i <= 100; i++) {
         newEl = i;
     }
 
-    // console.log(newEl);
-    newEl = `
+    if (newEl == "FizzBuzz") {
+        newEl = `
         <div class="col-2">
-            <div class="card py-4">${newEl}</div>
+            <div class="card bg-primary py-4">${newEl}</div>
         </div>
     `;
-    // console.log(newEl);
+    } else if (newEl == "Fizz") {
+        newEl = `
+        <div class="col-2">
+            <div class="card bg-success py-4">${newEl}</div>
+        </div>
+    `;
+    } else if (newEl == "Buzz") {
+        newEl = `
+        <div class="col-2">
+            <div class="card bg-warning text-dark py-4">${newEl}</div>
+        </div>
+    `;
+    } else {
+        newEl = `
+        <div class="col-2">
+            <div class="card text-dark py-4">${newEl}</div>
+        </div>
+    `;
+    }
+
     rowEl.innerHTML += newEl;
 }
